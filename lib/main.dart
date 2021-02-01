@@ -8,7 +8,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  TextEditingController controller = TextEditingController(text: "nilai");
+  TextEditingController name = TextEditingController();
+  TextEditingController mail = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController home = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,15 +24,66 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
+              
               TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.people),
+                  hintText: "Input your name"
+                ),
                 autocorrect: false,
                 onChanged: (value) {
                   setState(() {});
                 },
-                controller: controller,
+                controller: name,
               ),
-              Text(controller.text),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.mail),
+                  hintText: "Input your mail"
+                ),
+                autocorrect: false,
+                onChanged: (value) {
+                  setState(() {});
+                },
+                controller: mail,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.call),
+                  hintText: "Input your phone"
+                ),
+                autocorrect: false,
+                onChanged: (value) {
+                  setState(() {});
+                },
+                controller: phone,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.home),
+                  hintText: "Input your adress"
+                ),
+                autocorrect: false,
+                onChanged: (value) {
+                  setState(() {});
+                },
+                controller: home,
+              ),
+              Text("Name :"),
+              Text(name.text),
+              Text("Email :"),
+              Text(mail.text),
+              Text("Phone"),
+              Text(phone.text),
+              Text("Address"),
+              Text(home.text),
+              //Text(controller.text),
             ],
+            
           ),
         ),
       ),
