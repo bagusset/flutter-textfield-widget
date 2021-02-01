@@ -24,7 +24,6 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
